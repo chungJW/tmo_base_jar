@@ -5,8 +5,6 @@ import com.tmo.tmo_base_jar.Log;
 import com.tmo.tmo_base_jar.dto.BaseForm;
 import com.tmo.tmo_base_jar.dto.BaseResult;
 import com.tmo.tmo_base_jar.exception.BusinessException;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -59,10 +57,10 @@ public class AopConfig {
             }
             if (arg instanceof BaseForm) {
                 form = arg;
-                logMap.put("参数", form.toString());
+//                logMap.put("参数", form.toString());
             }
             if(arg instanceof String){
-                logMap.put("参数", form.toString());
+//                logMap.put("参数", form.toString());
 
             }
 
@@ -86,7 +84,7 @@ public class AopConfig {
         logMap.put("结果", result);
         long end = System.currentTimeMillis();
         logMap.put("耗时", (int)(end-start)+"ms");
-        Log.i(logMap.toString());
+        Log.i(JSON.toJSONString(logMap));
         return result;
     }
 

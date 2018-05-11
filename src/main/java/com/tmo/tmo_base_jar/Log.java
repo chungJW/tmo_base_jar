@@ -13,10 +13,10 @@ public class Log {
     public static Logger getLogger() {
 
         StackTraceElement[] stacks = Thread.currentThread().getStackTrace();
-        String location = "类名："+stacks[2].getClassName() + "\n函数名：" + stacks[2].getMethodName()
-                + "\n文件名：" + stacks[2].getFileName() + "\n行号："
-                + stacks[2].getLineNumber() + "";
-        System.out.println(location);
+//        String location = "类名："+stacks[2].getClassName() + "\n函数名：" + stacks[2].getMethodName()
+//                + "\n文件名：" + stacks[2].getFileName() + "\n行号："
+//                + stacks[2].getLineNumber() + "";
+//        System.out.println(location);
         String name = stacks[2].getClassName();
         if(map.containsKey(name)){
             return map.get(name);
