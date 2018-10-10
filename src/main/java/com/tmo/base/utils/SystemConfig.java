@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.Properties;
 
-@Component
+//@Component
 public class SystemConfig {
 
     private static Properties props ;

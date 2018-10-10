@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.Properties;
 
-@Component
-public class SystemConfig {
+//@Component
+public class BaseSystemConfig {
 
     private static Properties props ;
 
-    public SystemConfig(){
+    public BaseSystemConfig(){
 
         try {
             Resource resource = new ClassPathResource("/application.properties");//

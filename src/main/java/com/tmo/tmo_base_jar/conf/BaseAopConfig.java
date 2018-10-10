@@ -26,7 +26,7 @@ import java.util.Map;
 @Configuration
 @Component
 @Aspect
-public class AopConfig {
+public class BaseAopConfig {
     private HttpServletRequest httpServletRequest = null;
     private Object form = null;
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");

@@ -12,8 +12,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
-    private static final Logger log = LoggerFactory.getLogger(SwaggerConfig.class);
+public class BaseSwaggerConfig {
+    private static final Logger log = LoggerFactory.getLogger(BaseSwaggerConfig.class);
 
     @Bean
     public Docket testApi() {
